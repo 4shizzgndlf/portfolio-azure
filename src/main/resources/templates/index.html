@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" th:href="@{css/style.css}">
+</head>
+<body>
+<h1>Users:</h1>
+<ul>
+    <li th:each="entry : ${users.entrySet()}">
+        <span th:text="${entry.key}"></span> :
+        <span id="username">userName: </span> <span th:text="${entry.value.userName}"></span>,
+        <span id="password">password: </span> <span th:text="${entry.value.password}"></span>,
+        <span id="fullname">fullName: </span> <span th:text="${entry.value.fullname}"></span>,
+        <span id="email">email: </span> <span th:text="${entry.value.email}"></span>,
+        <span id="age">age: </span> <span th:text="${entry.value.age}"></span>,
+        <span id="address">address: </span> <span th:text="${entry.value.address}"></span>,
+        <span id="zipcode">zipCode: </span> <span th:text="${entry.value.zipCode}"></span>
+    </li>
+</ul>
+</body>
+</html>
