@@ -7,7 +7,7 @@ public class ConnectionManager {
 
     public ConnectionManager() {
         try {
-            this.conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/usersDB","root","Hda34ewyHda34ewy");
+            this.conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/usersDB","root","");
         }
         catch (Exception e){
             System.out.println("Could not connect to database");
